@@ -1,8 +1,8 @@
-pub fn part1(input: &str) -> u32 {
+pub fn part1(input: &str) -> usize {
     input.lines().map(to_two_digits).sum()
 }
 
-fn to_two_digits(line: &str) -> u32 {
+fn to_two_digits(line: &str) -> usize {
     let first_digit = line.find(|c: char| c.is_ascii_digit()).unwrap();
     let last_digit = line.rfind(|c: char| c.is_ascii_digit()).unwrap();
     format!(
@@ -10,11 +10,11 @@ fn to_two_digits(line: &str) -> u32 {
         &line.chars().nth(first_digit).unwrap(),
         &line.chars().nth(last_digit).unwrap()
     )
-    .parse::<u32>()
+    .parse::<usize>()
     .unwrap()
 }
 
-pub fn part2(input: &str) -> u32 {
+pub fn part2(input: &str) -> usize {
     input
         .lines()
         .map(letters_to_digits)

@@ -96,12 +96,12 @@ impl Set {
         self.red <= elf_set.red && self.green <= elf_set.green && self.blue <= elf_set.blue
     }
 
-    fn power(&self) -> u32 {
-        self.red as u32 * self.green as u32 * self.blue as u32
+    fn power(&self) -> usize {
+        self.red as usize * self.green as usize * self.blue as usize
     }
 }
 
-pub fn part1(input: &str) -> u32 {
+pub fn part1(input: &str) -> usize {
     let games: Vec<Game> = input.lines().map(|s| s.parse().unwrap()).collect();
     let elf_set = Set {
         red: 12,
@@ -111,11 +111,11 @@ pub fn part1(input: &str) -> u32 {
     games
         .iter()
         .filter(|game| game.is_possible(&elf_set))
-        .map(|game| game.id_number as u32)
+        .map(|game| game.id_number as usize)
         .sum()
 }
 
-pub fn part2(input: &str) -> u32 {
+pub fn part2(input: &str) -> usize {
     let games: Vec<Game> = input.lines().map(|s| s.parse().unwrap()).collect();
     games
         .iter()

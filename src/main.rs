@@ -36,6 +36,8 @@ fn main() {
         ("04", 2) => days::day_04::part2(&input),
         ("05", 1) => days::day_05::part1(&input),
         ("05", 2) => days::day_05::part2(&input),
+        ("06", 1) => days::day_06::part1(&input),
+        ("06", 2) => days::day_06::part2(&input),
         _ => todo!("Not implemented yet"),
     };
     println!("Day {}, part {}: {}", day, part, result);

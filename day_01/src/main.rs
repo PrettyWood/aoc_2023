@@ -1,3 +1,8 @@
+fn main() {
+    println!("Part 1: {}", part1(include_str!("input.txt")));
+    println!("Part 2: {}", part2(include_str!("input.txt")));
+}
+
 pub fn part1(input: &str) -> usize {
     input.lines().map(to_two_digits).sum()
 }

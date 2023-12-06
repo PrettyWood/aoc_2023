@@ -7,6 +7,11 @@ use nom::{
     IResult,
 };
 
+fn main() {
+    println!("Part 1: {}", part1(include_str!("input.txt")));
+    println!("Part 2: {}", part2(include_str!("input.txt")));
+}
+
 #[derive(Debug)]
 struct Grid {
     time: Vec<usize>,

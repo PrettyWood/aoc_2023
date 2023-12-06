@@ -8,6 +8,12 @@ use nom::{
     sequence::{preceded, separated_pair, tuple},
 };
 
+fn main() {
+    println!("Part 1: {}", part1(include_str!("input.txt")));
+    // FIXME: Need to rework the whole thing to handle part 2
+    // println!("Part 2: {}", part2(include_str!("input.txt")));
+}
+
 #[derive(Debug)]
 struct TMap {
     source: String,

@@ -1,6 +1,11 @@
 use regex::Regex;
 use std::str::FromStr;
 
+fn main() {
+    println!("Part 1: {}", part1(include_str!("input.txt")));
+    println!("Part 2: {}", part2(include_str!("input.txt")));
+}
+
 #[derive(Debug, PartialEq)]
 struct Game {
     id_number: u8,
